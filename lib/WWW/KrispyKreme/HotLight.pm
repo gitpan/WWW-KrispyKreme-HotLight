@@ -1,22 +1,22 @@
-package WWW::KrispyKreme::Hotlight;
+package WWW::KrispyKreme::HotLight;
 
 use 5.008_005;
-use Moose;
+use Mojo::Base -base;
 
 use URI;
 use WWW::Mechanize;
 use HTML::TreeBuilder::XPath;
 use Mojo::JSON;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
-has where => (is => 'rw', isa => 'ArrayRef[Num]');
+has 'where';
 
-has locations => (is => 'rw', lazy => 1, builder => '_build_locations');
+has locations => \&_build_locations;
 
 sub _build_locations {
     my ($self) = @_;
-    my $geo = $self->{where} or return [];
+    my $geo = $self->where or return [];
 
     my $mech = WWW::Mechanize->new;
     my $uri = URI->new('http://locations.krispykreme.com/Store-Locator/');
@@ -53,13 +53,13 @@ __END__
 
 =head1 NAME
 
-WWW::KrispyKreme::Hotlight - Fetch Krispy Kreme locations near a given geolocation!
+WWW::KrispyKreme::HotLight - Fetch Krispy Kreme locations near a given geolocation!
 
 =head1 SYNOPSIS
 
-  use WWW::KrispyKreme::Hotlight;
+  use WWW::KrispyKreme::HotLight;
 
-  my $donuts = WWW::KrispyKreme::Hotlight->new(where => [34.170833,-118.25]);
+  my $donuts = WWW::KrispyKreme::HotLight->new(where => [34.170833,-118.25]);
 
   # get array ref of all the krispy kreme locations near given geo
   my $stores = $donuts->locations;
@@ -82,7 +82,7 @@ WWW::KrispyKreme::Hotlight - Fetch Krispy Kreme locations near a given geolocati
 
 =head1 DESCRIPTION
 
-WWW::KrispyKreme::Hotlight is a Perl wrapper for Krispy Kreme's location search
+WWW::KrispyKreme::HotLight is a Perl wrapper for Krispy Kreme's location search
 page.  This module will return an array ref of hash refs which contain info for
 all the Krispy Kreme stores near the given geolocation.
 
@@ -90,10 +90,10 @@ all the Krispy Kreme stores near the given geolocation.
 
 =head2 new
 
-Creates a new WWW::KrispyKreme::Hotlight object.  Currently the only REQUIRED
+Creates a new WWW::KrispyKreme::HotLight object.  Currently the only REQUIRED
 option is 'where' and only supports geo
 
-    my $donuts = WWW::KrispyKreme::Hotlight->new(where => [34.170833,-118.25]);
+    my $donuts = WWW::KrispyKreme::HotLight->new(where => [34.170833,-118.25]);
 
 =head2 locations
 

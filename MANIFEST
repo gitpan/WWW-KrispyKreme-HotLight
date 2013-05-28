@@ -7,6 +7,6 @@ META.yml
 README
 cpanfile
 dist.ini
-lib/WWW/KrispyKreme/Hotlight.pm
+lib/WWW/KrispyKreme/HotLight.pm
 t/basic.t
 t/release-pod-syntax.t
