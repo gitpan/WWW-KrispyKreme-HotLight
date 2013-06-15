@@ -8,5 +8,5 @@ README
 cpanfile
 dist.ini
 lib/WWW/KrispyKreme/HotLight.pm
-t/basic.t
+t/donuts.t
 t/release-pod-syntax.t
