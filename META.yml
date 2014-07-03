@@ -3,15 +3,16 @@ abstract: 'Fetch Krispy Kreme locations near a given geolocation!'
 author:
   - 'Curtis Brandt <curtis@cpan.org>'
 build_requires:
-  Test::More: 0.88
+  Test::More: '0.88'
+  Test::RequiresInternet: '0.02'
 configure_requires:
-  Module::Build::Tiny: 0.019
+  Module::Build::Tiny: '0.036'
 dynamic_config: 0
-generated_by: 'Dist::Milla version v1.0.2, Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.130880'
-license: perl
+generated_by: 'Dist::Milla version v1.0.5, Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.140640'
+license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: WWW-KrispyKreme-HotLight
 no_index:
   directory:
@@ -22,16 +23,16 @@ no_index:
     - eg
     - examples
 requires:
-  HTML::TreeBuilder::XPath: 0.0
-  Mojo::Base: 0
-  Mojo::JSON: 0
-  URI: 0.0
-  WWW::Mechanize: 0.0
-  perl: 5.008005
+  HTML::TreeBuilder::XPath: '0.0'
+  Mojo::Base: '0'
+  Mojo::JSON: '0'
+  URI: '0.0'
+  WWW::Mechanize: '0.0'
+  perl: '5.008005'
 resources:
   bugtracker: https://github.com/aggrolite/WWW-KrispyKreme-HotLight/issues
   homepage: https://github.com/aggrolite/WWW-KrispyKreme-HotLight
   repository: https://github.com/aggrolite/WWW-KrispyKreme-HotLight.git
-version: 0.04
+version: '0.05'
 x_contributors:
   - 'Curtis Brandt <curtisjbrandt@gmail.com>'

@@ -8,7 +8,7 @@ use WWW::Mechanize;
 use HTML::TreeBuilder::XPath;
 use Mojo::JSON;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 has 'where';
 
@@ -179,8 +179,7 @@ Copyright 2013- Curtis Brandt
 
 =head1 LICENSE
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+MIT license.  See LICENSE file for details.
 
 =head1 SEE ALSO
 

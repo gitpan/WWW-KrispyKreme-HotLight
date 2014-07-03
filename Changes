@@ -1,5 +1,9 @@
 Revision history for WWW-KrispyKreme-Hotlight
 
+0.05  2014-07-03 10:22:57 PDT
+        - require Test::RequiresInternet on test
+        - switch to MIT license
+
 0.04  2013-06-15 10:11:39 PDT
         - add test: donuts.t
 
