@@ -23,16 +23,13 @@ no_index:
     - eg
     - examples
 requires:
-  HTML::TreeBuilder::XPath: '0.0'
   Mojo::Base: '0'
-  Mojo::JSON: '0'
-  URI: '0.0'
-  WWW::Mechanize: '0.0'
+  Mojo::UserAgent: '0'
   perl: '5.008005'
 resources:
   bugtracker: https://github.com/aggrolite/WWW-KrispyKreme-HotLight/issues
   homepage: https://github.com/aggrolite/WWW-KrispyKreme-HotLight
   repository: https://github.com/aggrolite/WWW-KrispyKreme-HotLight.git
-version: '0.05'
+version: '0.06'
 x_contributors:
   - 'Curtis Brandt <curtisjbrandt@gmail.com>'
